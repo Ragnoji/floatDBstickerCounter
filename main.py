@@ -70,9 +70,9 @@ with webdriver.Chrome(binary_yandex_driver_file, options=options) as driver:
             tmp = res[0].text.split()[1].replace(',', '')
             tmp = int(tmp)
             m.append(tmp)
-        for i in range(3):
-            m[i] = m[i] - m[i + 1]
-            m[i] = m[i] * (i + 1)
+        for g in range(3):
+            m[g] = m[g] - m[g + 1]
+            m[g] = m[g] * (g + 1)
         m[3] = m[3] * 4
         quant = sum(m)
         ws[address_n] = names_of_stickers[id]
