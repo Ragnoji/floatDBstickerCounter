@@ -12,6 +12,9 @@ And csgo_items from there https://raw.githubusercontent.com/SteamDatabase/GameTr
 Then, you need to open Command Line inside this folder (you can do this by clicking LMB on folder route on top and entering "cmd")
 And write these commands one by one:
 
-python -m venv venv<br />/venv/Scripts/activate.bat<br />pip3 install -r requirements.txt
+py -m pip install --upgrade pip<br />
+py -m pip install --user virtualenv<br />
+
+py -m venv venv<br />venv\Scripts\activate.bat<br />pip3 install -r requirements.txt
 
 Then you can close it and all thing are set up. You just need to add Sticker ids in sticker_ids.txt and run start.bat file(it starts script)
