@@ -1,6 +1,6 @@
 First of all:
 -
-Install Python ~3.10 from https://www.python.org/\
+Install Python ~3.10 from https://www.python.org/ <br />
 Install chromedriver for your os from https://chromedriver.chromium.org/downloads and locate it in this folder
 
 Then you need csgo_english file from there https://raw.githubusercontent.com/SteamDatabase/GameTracking-CSGO/master/csgo/resource/csgo_english.txt
