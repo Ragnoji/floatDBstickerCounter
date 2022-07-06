@@ -69,7 +69,7 @@ with webdriver.Chrome(binary_yandex_driver_file, options=options) as driver:
                     driver.refresh()
                 res = driver.find_elements_by_xpath(count_xpath)
                 sleep(1.5)
-                if res and res[0].text.split()[1].replace(',', '').isdigit():
+                if res and res[0].text.split()[1].replace(',', '').replace('~','').isdigit():
                     break
                 k += 1
             tmp = res[0].text.split()[1].replace(',', '')
