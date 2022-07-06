@@ -21,6 +21,8 @@ with open('items_game.txt', 'r', encoding='utf-8') as current_items:
         if len(line.strip()) > 2 and line.strip()[1:-1] in ids_of_stickers:
             while "item_name" not in lines[-1 - i]:
                 i -= 1
+            if '#StickerKit' not in lines[-1 - i]:
+                continue
             item_name = lines[-1 - i][:lines[-1 - i].rfind('"')]
             item_name = item_name[item_name.rfind('"') + 2:]
             for line2 in names_lines[::-1]:
@@ -42,6 +44,9 @@ with webdriver.Chrome(binary_yandex_driver_file, options=options) as driver:
         for cookie in pickle.load(open('steam_cookies', 'rb')):
             driver.add_cookie(cookie)
         driver.refresh()
+        if driver.find_elements_by_xpath('//*[@id="steamPassword"]'):
+            driver.delete_all_cookies()
+            driver.refresh()
     _ = input('Press Enter when authorised')
     driver.get('https://steamcommunity.com/')
 
